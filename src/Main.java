@@ -1,10 +1,8 @@
 public class Main {
-    static int x = 3;
-    static int y = 4;
-    static int z = 2;
-
     public static void main(String args[]) {
-
+        int x = 3;
+        int y = 4;
+        int z = 2;
         hello();
         welcome();
         welcome();
@@ -16,6 +14,20 @@ public class Main {
         System.out.println(e);
         System.out.println(umnozh(z, z, z));
         System.out.println(sum(y, y));
+
+        play("Tom", 34);
+        play("Bob", 28);
+        play("Sam", 23);
+        sum(100, 50);
+        umnozh(10, 10, 10);
+        int w = umnozh(5, 5, 5);
+        System.out.println(w);
+        ar(100,1, 2, 3, 4, 5, 6);
+    }
+
+    static void play(String name, int age) {
+        System.out.println(name);
+        System.out.println(age);
     }
 
     static void hello() {
@@ -37,4 +49,17 @@ public class Main {
         System.out.println(a + " *" + b + " *" + c + " =" + umn);
         return umn;
     }
+
+    static void ar(int a,int... nums) {
+        int res = 0;
+        for (int i : nums
+        ) {
+            res += i;
+        }
+        System.out.println(res);
+        res+=a;
+        System.out.println(res);
+    }
+
+
 }
